@@ -6,6 +6,8 @@ namespace ancalte.Controllers
     {
         public IActionResult Index()
         {
+            //测试异常处理
+            //throw new System.Exception("异常");
             return View();
         }
 
