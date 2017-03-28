@@ -24,10 +24,5 @@ namespace ancalte.Controllers
 
             return View();
         }
-
-        public IActionResult Error()
-        {
-            return View();
-        }
     }
 }

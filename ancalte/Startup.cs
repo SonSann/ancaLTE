@@ -41,8 +41,10 @@ namespace ancalte
             }
             else
             {
+                app.UseDeveloperExceptionPage();
+                app.UseBrowserLink();
                 //生产环境异常处理
-                app.UseExceptionHandler("/Home/Error");
+                //app.UseExceptionHandler("/Shared/Error");
             }
 
             //使用静态文件
@@ -52,7 +54,8 @@ namespace ancalte
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Login}/{action=Index}/{id?}");
+                //template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
